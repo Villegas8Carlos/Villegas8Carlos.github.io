@@ -1,235 +1,301 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Carlos Villegas | Desarrollador Web</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Portfolio | Carlos Villegas</title>
 
 <style>
-:root {
+:root{
   --bg:#0b1220;
   --card:#111a2e;
   --text:#e5e7eb;
   --muted:#94a3b8;
   --accent:#38bdf8;
+  --line:#1f2a44;
 }
 
-* {
+*{
   margin:0;
   padding:0;
   box-sizing:border-box;
-  font-family:Arial, sans-serif;
+  font-family:system-ui, Arial;
   scroll-behavior:smooth;
 }
 
-body {
+body{
   background:var(--bg);
   color:var(--text);
 }
 
 /* NAV */
-nav {
-  position:sticky;
+nav{
+  position:fixed;
   top:0;
-  background:rgba(11,18,32,0.9);
-  backdrop-filter:blur(10px);
+  width:100%;
   display:flex;
   justify-content:center;
-  gap:20px;
-  padding:15px;
-  border-bottom:1px solid #1f2a44;
+  gap:22px;
+  padding:14px;
+  backdrop-filter:blur(12px);
+  background:rgba(11,18,32,0.75);
+  border-bottom:1px solid var(--line);
+  z-index:1000;
 }
 
-nav a {
+nav a{
   color:var(--text);
   text-decoration:none;
   font-size:14px;
+  transition:0.2s;
 }
 
-nav a:hover {
+nav a:hover{
   color:var(--accent);
 }
 
 /* HERO */
-header {
+header{
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
   text-align:center;
-  padding:90px 20px 60px;
+  padding:0 20px;
 }
 
-.badge {
-  display:inline-block;
-  padding:6px 12px;
-  background:#1f2937;
-  border:1px solid #334155;
-  border-radius:999px;
+.badge{
+  border:1px solid var(--line);
   color:var(--accent);
+  padding:6px 14px;
+  border-radius:999px;
   font-size:12px;
   margin-bottom:15px;
 }
 
-h1 {
-  font-size:48px;
+h1{
+  font-size:56px;
 }
 
-.subtitle {
+.subtitle{
   color:var(--muted);
-  margin-top:10px;
+  max-width:650px;
+  margin-top:12px;
+  font-size:18px;
 }
 
-/* SECTIONS */
-section {
-  max-width:900px;
-  margin:auto;
-  padding:60px 20px;
+.cta{
+  margin-top:25px;
+  display:flex;
+  gap:10px;
 }
 
-h2 {
-  color:var(--accent);
-  margin-bottom:20px;
-}
-
-/* CARD */
-.card {
-  background:var(--card);
-  padding:20px;
-  border-radius:12px;
-  margin-bottom:15px;
-  border:1px solid #1f2a44;
+.btn{
+  padding:10px 16px;
+  border-radius:10px;
+  text-decoration:none;
+  font-weight:600;
   transition:0.2s;
 }
 
-.card:hover {
-  transform:translateY(-3px);
+.btn.primary{
+  background:var(--accent);
+  color:#000;
+}
+
+.btn.secondary{
+  border:1px solid var(--line);
+  color:var(--text);
+}
+
+.btn:hover{
+  transform:scale(1.05);
+}
+
+/* SECTIONS */
+section{
+  max-width:950px;
+  margin:auto;
+  padding:90px 20px;
+}
+
+h2{
+  color:var(--accent);
+  margin-bottom:25px;
+  font-size:20px;
+}
+
+/* CARD */
+.card{
+  background:var(--card);
+  border:1px solid var(--line);
+  padding:20px;
+  border-radius:14px;
+  margin-bottom:15px;
+  transition:0.3s;
+  opacity:0;
+  transform:translateY(20px);
+}
+
+.card.show{
+  opacity:1;
+  transform:translateY(0);
+}
+
+.card:hover{
+  transform:translateY(-5px);
   border-color:var(--accent);
 }
 
-.muted {
+.muted{
   color:var(--muted);
   font-size:14px;
+  margin-top:5px;
 }
 
-/* BADGES */
-.tag {
+.tags{
+  margin-top:10px;
+}
+
+.tag{
   display:inline-block;
+  font-size:12px;
   padding:4px 10px;
+  margin-right:5px;
+  margin-top:5px;
   border-radius:999px;
   background:#1f2937;
-  border:1px solid #334155;
-  font-size:12px;
-  margin-top:8px;
-  margin-right:5px;
+  border:1px solid var(--line);
+  color:var(--muted);
+}
+
+footer{
+  text-align:center;
+  padding:50px;
   color:var(--muted);
 }
 </style>
-
 </head>
 
 <body>
 
 <nav>
-<a href="#experiencia">Experiencia</a>
-<a href="#proyectos">Proyectos</a>
-<a href="#sobre">Sobre mí</a>
-<a href="#contacto">Contacto</a>
+<a href="#home">Inicio</a>
+<a href="#experience">Experiencia</a>
+<a href="#projects">Proyectos</a>
+<a href="#about">Sobre mí</a>
+<a href="#contact">Contacto</a>
 </nav>
 
-<header>
+<header id="home">
 <div class="badge">Disponible para trabajar</div>
 <h1>Carlos Villegas 👋</h1>
-<div class="subtitle">Desarrollador Web | Java · Spring Boot · MySQL · Frontend</div>
+<div class="subtitle">
+Desarrollador Full-Stack especializado en Java, Spring Boot y sistemas escalables.
+</div>
+
+<div class="cta">
+<a class="btn primary" href="#projects">Ver proyectos</a>
+<a class="btn secondary" href="mailto:cvillcarr@gmail.com">Contactar</a>
+</div>
 </header>
 
-<section id="experiencia">
+<section id="experience">
 <h2>Experiencia</h2>
 
 <div class="card">
-<b>Entrenador de fútbol</b><br>
-<span class="muted">A.D. El Norte · 2024 - Actualidad</span>
-<p class="muted">
-Gestión de equipos Prebenjamines, liderazgo, comunicación y trabajo en equipo.
-</p>
+<b>Entrenador de fútbol</b>
+<div class="muted">A.D. El Norte · 2024 - Actualidad</div>
+<div class="muted">Gestión de equipos, liderazgo y formación deportiva.</div>
 </div>
 
 <div class="card">
-<b>Desarrollador Web</b><br>
-<span class="muted">Casa Rural Tomillo · 2025 - 2026</span>
-<p class="muted">
-Sistema completo de reservas con Spring Boot, Thymeleaf, HTML, CSS, JS y MariaDB.
-</p>
+<b>Desarrollador Web</b>
+<div class="muted">Casa Rural Tomillo · 2025 - 2026</div>
+<div class="muted">Sistema de reservas full-stack con Spring Boot y MariaDB.</div>
+<div class="tags">
 <span class="tag">Spring Boot</span>
 <span class="tag">Thymeleaf</span>
 <span class="tag">MariaDB</span>
 </div>
-
-<div class="card">
-<b>Prácticas Desarrollo Web</b><br>
-<span class="muted">CDS (HPE) · 2025</span>
-<p class="muted">
-Desarrollo de funcionalidades web internas y gestión de aplicaciones con Java.
-</p>
 </div>
 
 <div class="card">
-<b>Mozo de almacén</b><br>
-<span class="muted">GVO Optics · 2025</span>
-<p class="muted">
-Inventario, preparación de pedidos y gestión logística.
-</p>
+<b>Prácticas en empresa</b>
+<div class="muted">CDS (HPE) · 2025</div>
+<div class="muted">Desarrollo de aplicaciones internas en Java.</div>
 </div>
-
 </section>
 
-<section id="proyectos">
+<section id="projects">
 <h2>Proyectos</h2>
 
 <div class="card">
 <b>Miiter</b>
-<p class="muted">Gestión de equipos, ligas y estadísticas deportivas.</p>
+<div class="muted">Plataforma de gestión deportiva con ligas y estadísticas.</div>
+<div class="tags">
 <span class="tag">Spring Boot</span>
-<span class="tag">Java</span>
 <span class="tag">MySQL</span>
+<span class="tag">Java</span>
+</div>
 </div>
 
 <div class="card">
 <b>Tech Challenge HPE</b>
-<p class="muted">Sistema de gestión de retos durante prácticas en empresa.</p>
+<div class="muted">Sistema de retos y gestión interna en empresa.</div>
+<div class="tags">
 <span class="tag">Spring Boot</span>
-<span class="tag">Java</span>
 <span class="tag">MariaDB</span>
+</div>
 </div>
 
 <div class="card">
 <b>Casa Rural</b>
-<p class="muted">Web de reservas y gestión completa para cliente real.</p>
+<div class="muted">Sistema real de reservas con panel administrativo.</div>
+<div class="tags">
+<span class="tag">Full Stack</span>
 <span class="tag">Spring Boot</span>
-<span class="tag">Thymeleaf</span>
-<span class="tag">JS</span>
 </div>
-
+</div>
 </section>
 
-<section id="sobre">
+<section id="about">
 <h2>Sobre mí</h2>
 
 <div class="card">
-Desarrollador Web con experiencia en Java y Spring Boot.
-He trabajado en proyectos reales con bases de datos, frontend y backend.
-
-Me gusta crear aplicaciones completas, aprender nuevas tecnologías y trabajar en equipo.
+Soy desarrollador web con enfoque en backend y sistemas completos.
+Me gusta construir productos reales, no solo páginas estáticas.
 </div>
-
 </section>
 
-<section id="contacto">
+<section id="contact">
 <h2>Contacto</h2>
 
 <div class="card">
 📧 Email: cvillcarr@gmail.com<br>
-💼 LinkedIn: https://www.linkedin.com/in/carlos-villegas-carrizo-desarrollador-web-programador/<br>
-💻 GitHub: Villegas8Carlos
+💻 GitHub: Villegas8Carlos<br>
+💼 LinkedIn: disponible
 </div>
-
 </section>
+
+<footer>
+Hecho con dedicación por Carlos Villegas
+</footer>
+
+<script>
+const cards = document.querySelectorAll('.card');
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add('show');
+    }
+  });
+}, {threshold:0.1});
+
+cards.forEach(card => observer.observe(card));
+</script>
 
 </body>
 </html>
