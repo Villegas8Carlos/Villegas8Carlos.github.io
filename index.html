@@ -23,15 +23,23 @@
     <a href="#about">Sobre mí</a>
     <a href="mailto:cvillcarr@gmail.com">Contacto</a>
 
-    <select class="theme-select" onchange="setTheme(this.value)">
-        <option value="system">Sistema</option>
-        <option value="dark">Oscuro</option>
-        <option value="light">Claro</option>
-    </select>
+    <div class="theme-toggle">
+        <button onclick="setTheme('light')">
+            <i data-lucide="sun"></i>
+        </button>
+
+        <button onclick="setTheme('dark')">
+            <i data-lucide="moon"></i>
+        </button>
+
+        <button onclick="setTheme('system')">
+            <i data-lucide="monitor"></i>
+        </button>
+    </div>
 </nav>
 
 <header id="home">
-    <img class="photo" src="/images/foto.jpeg" />
+    <img class="photo" src="./images/foto.jpeg" />
     <a class="status-badge" href="https://www.linkedin.com/in/carlos-villegas-carrizo-desarrollador-web-programador/" target="_blank">Disponible para trabajar</a>
     <div class="subtitle">Cuento con 1 año de experiencia. Desarrollador de aplicaciones web de Madrid, España. Especializado en el desarrollo de páginas web accesibles, modernas y únicas.</div>
 
@@ -39,7 +47,7 @@
         <a class="btn primary" href="mailto:cvillcarr@gmail.com">
             <i data-lucide="mail"></i> cvillcarr@gmail.com
         </a>
-        <a class="btn secondary" href="files/CV_CarlosVillegas.pdf" download>Descargar CV</a>
+        <a class="btn secondary" href="/files/CV_CarlosVillegas.pdf" target="_blank">Ver CV</a>
         <a class="btn secondary" href="https://www.linkedin.com/in/carlos-villegas-carrizo-desarrollador-web-programador/" target="_blank">
             <i data-lucide="linkedin"></i> LinkedIn
         </a>
@@ -88,7 +96,7 @@
     <h2><i data-lucide="code-2"></i> Proyectos</h2>
 
     <div class="card">
-        <img class="project-img" src="/images/miiter.png" />
+        <img class="project-img" src="./images/miiter.png" />
         <b>Miiter</b>
         <div class="tags">
             <span class="tag">Spring Boot</span>
@@ -109,7 +117,7 @@
     </div>
 
     <div class="card">
-        <img class="project-img" src="/images/techchallenge.png" />
+        <img class="project-img" src="./images/techchallenge.png" />
         <b>Tech Challenge</b>
         <div class="tags">
             <span class="tag">Spring Boot</span>
@@ -132,11 +140,15 @@
 
 <section id="about">
     <h2><i data-lucide="user-check"></i> Sobre mí</h2>
-    <div class="card">
-        Me llamo Carlos, pero mis amigos me llaman Villegas. Empecé en la programación en 2023 a través del grado superior de desarrollo de aplicaciones web. Actualmente estoy realizando proyectos personales.
 
-        Algunos de mis éxitos incluyen la creación de una web de reservas donde puedes pagar para una casa rural.
-        <img class="sobremi-img" src="/images/foto.jpeg" />
+    <div class="about-wrapper">
+        <div class="card about-text">
+            Me llamo Carlos, pero mis amigos me llaman Villegas. Empecé en la programación en 2023 a través del grado superior de desarrollo de aplicaciones web. Actualmente estoy realizando proyectos personales.
+
+            Algunos de mis éxitos incluyen la creación de una web de reservas donde puedes pagar para una casa rural.
+        </div>
+
+        <img class="about-img" src="./images/foto.jpeg" />
     </div>
 </section>
 
