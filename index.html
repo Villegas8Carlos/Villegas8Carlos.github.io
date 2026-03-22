@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Portfolio | Carlos Villegas</title>
+<title>Carlos Villegas | Portfolio</title>
 
 <style>
 :root{
@@ -15,17 +15,19 @@
   --line:#1f2a44;
 }
 
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:system-ui, Arial;
-  scroll-behavior:smooth;
-}
+*{margin:0;padding:0;box-sizing:border-box;font-family:system-ui,Arial;scroll-behavior:smooth}
 
 body{
-  background:var(--bg);
   color:var(--text);
+  background: linear-gradient(-45deg,#0b1220,#0f1b33,#0b1220,#111a2e);
+  background-size:400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient{
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
 }
 
 /* NAV */
@@ -35,10 +37,10 @@ nav{
   width:100%;
   display:flex;
   justify-content:center;
-  gap:22px;
+  gap:20px;
   padding:14px;
-  backdrop-filter:blur(12px);
-  background:rgba(11,18,32,0.75);
+  backdrop-filter:blur(14px);
+  background:rgba(11,18,32,0.6);
   border-bottom:1px solid var(--line);
   z-index:1000;
 }
@@ -50,8 +52,39 @@ nav a{
   transition:0.2s;
 }
 
-nav a:hover{
+nav a.active{
   color:var(--accent);
+}
+
+nav a:hover{color:var(--accent)}
+
+/* MOBILE MENU */
+.menu-btn{
+  display:none;
+  position:absolute;
+  left:15px;
+  top:10px;
+  font-size:22px;
+  cursor:pointer;
+}
+
+@media(max-width:768px){
+  nav{
+    justify-content:flex-end;
+  }
+  .menu-btn{display:block}
+  nav .links{
+    display:none;
+    flex-direction:column;
+    position:absolute;
+    top:50px;
+    right:10px;
+    background:rgba(17,26,46,0.95);
+    padding:10px;
+    border:1px solid var(--line);
+    border-radius:10px;
+  }
+  nav .links.show{display:flex}
 }
 
 /* HERO */
@@ -65,31 +98,25 @@ header{
   padding:0 20px;
 }
 
-.badge{
-  border:1px solid var(--line);
-  color:var(--accent);
-  padding:6px 14px;
-  border-radius:999px;
-  font-size:12px;
+.photo{
+  width:110px;
+  height:110px;
+  border-radius:50%;
+  background:#1f2937;
+  border:2px solid var(--accent);
   margin-bottom:15px;
 }
 
-h1{
-  font-size:56px;
-}
+h1{font-size:54px}
 
 .subtitle{
   color:var(--muted);
   max-width:650px;
-  margin-top:12px;
+  margin-top:10px;
   font-size:18px;
 }
 
-.cta{
-  margin-top:25px;
-  display:flex;
-  gap:10px;
-}
+.cta{margin-top:25px;display:flex;gap:10px}
 
 .btn{
   padding:10px 16px;
@@ -99,43 +126,25 @@ h1{
   transition:0.2s;
 }
 
-.btn.primary{
-  background:var(--accent);
-  color:#000;
-}
+.btn.primary{background:var(--accent);color:#000}
+.btn.secondary{border:1px solid var(--line);color:var(--text)}
+.btn:hover{transform:scale(1.05)}
 
-.btn.secondary{
-  border:1px solid var(--line);
-  color:var(--text);
-}
+section{max-width:1000px;margin:auto;padding:90px 20px}
 
-.btn:hover{
-  transform:scale(1.05);
-}
-
-/* SECTIONS */
-section{
-  max-width:950px;
-  margin:auto;
-  padding:90px 20px;
-}
-
-h2{
-  color:var(--accent);
-  margin-bottom:25px;
-  font-size:20px;
-}
+h2{color:var(--accent);margin-bottom:25px}
 
 /* CARD */
 .card{
-  background:var(--card);
+  background:rgba(17,26,46,0.6);
   border:1px solid var(--line);
   padding:20px;
   border-radius:14px;
   margin-bottom:15px;
-  transition:0.3s;
   opacity:0;
-  transform:translateY(20px);
+  transform:translateY(25px);
+  transition:0.6s;
+  backdrop-filter: blur(10px);
 }
 
 .card.show{
@@ -148,153 +157,144 @@ h2{
   border-color:var(--accent);
 }
 
-.muted{
-  color:var(--muted);
-  font-size:14px;
-  margin-top:5px;
-}
-
-.tags{
-  margin-top:10px;
-}
-
+.tags{margin-top:10px}
 .tag{
   display:inline-block;
   font-size:12px;
   padding:4px 10px;
   margin-right:5px;
-  margin-top:5px;
   border-radius:999px;
   background:#1f2937;
   border:1px solid var(--line);
   color:var(--muted);
 }
 
-footer{
-  text-align:center;
-  padding:50px;
-  color:var(--muted);
+/* PROJECTS */
+.project-img{
+  width:100%;
+  height:140px;
+  background:#1f2937;
+  border-radius:10px;
+  margin-bottom:10px;
 }
+
+.project-links a{
+  margin-right:10px;
+  font-size:13px;
+  color:var(--accent);
+  text-decoration:none;
+}
+
+footer{text-align:center;padding:50px;color:var(--muted)}
 </style>
 </head>
 
 <body>
 
 <nav>
+<div class="menu-btn" onclick="toggleMenu()">☰</div>
+<div class="links">
 <a href="#home">Inicio</a>
-<a href="#experience">Experiencia</a>
 <a href="#projects">Proyectos</a>
+<a href="#experience">Experiencia</a>
 <a href="#about">Sobre mí</a>
 <a href="#contact">Contacto</a>
+</div>
 </nav>
 
 <header id="home">
-<div class="badge">Disponible para trabajar</div>
-<h1>Carlos Villegas 👋</h1>
-<div class="subtitle">
-Desarrollador Full-Stack especializado en Java, Spring Boot y sistemas escalables.
-</div>
-
+<div class="photo"></div>
+<h1>Carlos Villegas</h1>
+<div class="subtitle">Construyo software que resuelve problemas reales</div>
 <div class="cta">
 <a class="btn primary" href="#projects">Ver proyectos</a>
 <a class="btn secondary" href="mailto:cvillcarr@gmail.com">Contactar</a>
 </div>
 </header>
 
-<section id="experience">
-<h2>Experiencia</h2>
-
-<div class="card">
-<b>Entrenador de fútbol</b>
-<div class="muted">A.D. El Norte · 2024 - Actualidad</div>
-<div class="muted">Gestión de equipos, liderazgo y formación deportiva.</div>
-</div>
-
-<div class="card">
-<b>Desarrollador Web</b>
-<div class="muted">Casa Rural Tomillo · 2025 - 2026</div>
-<div class="muted">Sistema de reservas full-stack con Spring Boot y MariaDB.</div>
-<div class="tags">
-<span class="tag">Spring Boot</span>
-<span class="tag">Thymeleaf</span>
-<span class="tag">MariaDB</span>
-</div>
-</div>
-
-<div class="card">
-<b>Prácticas en empresa</b>
-<div class="muted">CDS (HPE) · 2025</div>
-<div class="muted">Desarrollo de aplicaciones internas en Java.</div>
-</div>
-</section>
-
 <section id="projects">
 <h2>Proyectos</h2>
 
 <div class="card">
+<div class="project-img"></div>
 <b>Miiter</b>
-<div class="muted">Plataforma de gestión deportiva con ligas y estadísticas.</div>
-<div class="tags">
-<span class="tag">Spring Boot</span>
-<span class="tag">MySQL</span>
-<span class="tag">Java</span>
+<p class="muted">Plataforma de gestión deportiva</p>
+<div class="tags"><span class="tag">Spring Boot</span><span class="tag">MySQL</span></div>
+<div class="project-links">
+<a href="#">Ver demo</a>
+<a href="#">GitHub</a>
 </div>
 </div>
 
 <div class="card">
-<b>Tech Challenge HPE</b>
-<div class="muted">Sistema de retos y gestión interna en empresa.</div>
-<div class="tags">
-<span class="tag">Spring Boot</span>
-<span class="tag">MariaDB</span>
-</div>
-</div>
-
-<div class="card">
-<b>Casa Rural</b>
-<div class="muted">Sistema real de reservas con panel administrativo.</div>
-<div class="tags">
-<span class="tag">Full Stack</span>
-<span class="tag">Spring Boot</span>
+<div class="project-img"></div>
+<b>Tech Challenge</b>
+<p class="muted">Sistema interno de empresa</p>
+<div class="tags"><span class="tag">Java</span><span class="tag">Spring</span></div>
+<div class="project-links">
+<a href="#">Ver demo</a>
+<a href="#">GitHub</a>
 </div>
 </div>
 </section>
 
+<section id="experience">
+<h2>Experiencia</h2>
+<div class="card">Entrenador fútbol - A.D. El Norte</div>
+<div class="card">Desarrollador Web - Casa Rural Tomillo</div>
+</section>
+
 <section id="about">
 <h2>Sobre mí</h2>
-
 <div class="card">
-Soy desarrollador web con enfoque en backend y sistemas completos.
-Me gusta construir productos reales, no solo páginas estáticas.
+Desarrollador web enfocado en backend y sistemas completos.
+Me gusta crear productos reales y escalables.
 </div>
 </section>
 
 <section id="contact">
 <h2>Contacto</h2>
-
 <div class="card">
-📧 Email: cvillcarr@gmail.com<br>
-💻 GitHub: Villegas8Carlos<br>
-💼 LinkedIn: disponible
+📧 cvillcarr@gmail.com<br>
+💻 GitHub: Villegas8Carlos
 </div>
 </section>
 
-<footer>
-Hecho con dedicación por Carlos Villegas
-</footer>
+<footer>Hecho por Carlos Villegas</footer>
 
 <script>
-const cards = document.querySelectorAll('.card');
+// MENU
+function toggleMenu(){
+  document.querySelector('.links').classList.toggle('show');
+}
 
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if(entry.isIntersecting){
-      entry.target.classList.add('show');
+// SCROLL REVEAL
+const cards=document.querySelectorAll('.card');
+const observer=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting)e.target.classList.add('show');
+  });
+},{threshold:0.1});
+cards.forEach(c=>observer.observe(c));
+
+// SCROLL SPY
+const sections=document.querySelectorAll('section');
+const navLinks=document.querySelectorAll('nav a');
+
+window.addEventListener('scroll',()=>{
+  let current='';
+  sections.forEach(sec=>{
+    const top=sec.offsetTop;
+    if(pageYOffset>=top-150) current=sec.id;
+  });
+
+  navLinks.forEach(link=>{
+    link.classList.remove('active');
+    if(link.getAttribute('href')==='#'+current){
+      link.classList.add('active');
     }
   });
-}, {threshold:0.1});
-
-cards.forEach(card => observer.observe(card));
+});
 </script>
 
 </body>
