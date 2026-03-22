@@ -1,8 +1,40 @@
 // THEME SYSTEM (system + toggle)
-function toggleTheme(){
-  document.body.classList.toggle('light');
-  localStorage.setItem('theme',document.body.classList.contains('light')?'light':'dark');
+function setTheme(mode){
+  if(mode === "dark"){
+    document.body.classList.add("light");
+    localStorage.setItem("theme","light");
+  }
+
+  if(mode === "light"){
+    document.body.classList.remove("light");
+    localStorage.setItem("theme","dark");
+  }
+
+  if(mode === "system"){
+    localStorage.removeItem("theme");
+
+    if(window.matchMedia("(prefers-color-scheme: light)").matches){
+      document.body.classList.add("light");
+    } else {
+      document.body.classList.remove("light");
+    }
+  }
 }
+
+// load theme
+(function(){
+  const saved = localStorage.getItem("theme");
+
+  if(saved === "light"){
+    document.body.classList.add("light");
+  }
+
+  if(!saved){
+    if(window.matchMedia("(prefers-color-scheme: light)").matches){
+      document.body.classList.add("light");
+    }
+  }
+})();
 
 // load theme
 if(localStorage.getItem('theme')==='light'){
@@ -10,12 +42,17 @@ if(localStorage.getItem('theme')==='light'){
 }
 
 // SCROLL REVEAL (stagger)
-const cards=document.querySelectorAll('.card');
-const observer=new IntersectionObserver(entries=>{
-  entries.forEach((e,i)=>{
-    if(e.isIntersecting){
-      setTimeout(()=>e.target.classList.add('show'), i*120);
+const cards = document.querySelectorAll('.card');
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add('show');
     }
   });
-},{threshold:0.1});
-cards.forEach(c=>observer.observe(c));
+},{threshold:0.15});
+
+cards.forEach((c, i) => {
+  c.style.transitionDelay = `${i * 80}ms`;
+  observer.observe(c);
+});

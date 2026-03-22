@@ -2,92 +2,153 @@
 <html lang="es" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Carlos Villegas | Portfolio</title>
     <link rel="stylesheet" href="/css/index.css">
     <script src="/js/index.js" defer></script>
     <link rel="icon" type="image/png" href="/images/favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap" rel="stylesheet">
-</head>
-
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 
 <body>
 
-<button class="theme-btn" onclick="toggleTheme()">🌓</button>
-
 <nav>
-<a href="#home">Inicio</a>
-<a href="#projects">Proyectos</a>
-<a href="#experience">Experiencia</a>
-<a href="#about">Sobre mí</a>
-<a href="#contact">Contacto</a>
+    <a href="#projects">Proyectos</a>
+    <a href="#experience">Experiencia</a>
+    <a href="#about">Sobre mí</a>
+    <a href="mailto:cvillcarr@gmail.com">Contacto</a>
+
+    <select class="theme-select" onchange="setTheme(this.value)">
+        <option value="system">Sistema</option>
+        <option value="dark">Oscuro</option>
+        <option value="light">Claro</option>
+    </select>
 </nav>
 
 <header id="home">
-<div class="photo"></div>
-<h1>Carlos Villegas</h1>
-<div class="subtitle">Construyo software que resuelve problemas reales</div>
+    <img class="photo" src="/images/Carlos-Villegas-Carlos.jpg" />
+    <a class="status-badge" href="https://www.linkedin.com/in/carlos-villegas-carrizo-desarrollador-web-programador/" target="_blank">Disponible para trabajar</a>
+    <div class="subtitle">Cuento con 1 año de experiencia. Desarrollador de aplicaciones web de Madrid, España. Especializado en el desarrollo de páginas web accesibles, modernas y únicas.</div>
 
-<div class="cta">
-<a class="btn primary" href="#projects">Ver proyectos</a>
-<a class="btn secondary" href="assets/cv.pdf" download>Descargar CV</a>
-</div>
+    <div class="cta">
+        <a class="btn primary" href="mailto:cvillcarr@gmail.com">
+            <i data-lucide="mail"></i> cvillcarr@gmail.com
+        </a>
+        <a class="btn secondary" href="files/CV_CarlosVillegas.pdf" download>Descargar CV</a>
+        <a class="btn secondary" href="https://www.linkedin.com/in/carlos-villegas-carrizo-desarrollador-web-programador/" target="_blank">
+            <i data-lucide="linkedin"></i> LinkedIn
+        </a>
+    </div>
 </header>
 
-<section id="projects">
-<h2>Proyectos</h2>
-
-<div class="card">
-<img class="project-img" src="assets/projects/miiter.png" />
-<b>Miiter</b>
-<div class="muted">Gestión deportiva completa</div>
-<div class="tags"><span class="tag">Spring Boot</span><span class="tag">MySQL</span></div>
-<div class="project-links">
-<a href="#">Ver demo</a>
-<a href="#">GitHub</a>
-</div>
-</div>
-
-<div class="card">
-<img class="project-img" src="assets/projects/techchallenge.png" />
-<b>Tech Challenge</b>
-<div class="muted">Sistema interno de empresa</div>
-<div class="tags"><span class="tag">Java</span><span class="tag">Spring</span></div>
-<div class="project-links">
-<a href="#">Ver demo</a>
-<a href="#">GitHub</a>
-</div>
-</div>
+<section id="experience">
+    <h2><i data-lucide="briefcase"></i> Experiencia laboral</h2>
+    <div class="card">
+        <h3>Entrenador fútbol</h3>
+        <h4>A.D. El Norte</h4>
+        <p>sept. 2024 - actualidad · Getafe · Presencial</p>
+        <p>
+            2024/2025: Debutante<br>
+            2025/2026: Prebenjamines
+        </p>
+    </div>
+    <div class="card">
+        <h3>Desarrollador web</h3>
+        <h4>Casa Rural Tomillo</h4>
+        <p>jul. 2025 - mar. 2026 · Navalcán · Híbrido</p>
+        <p>
+            Sitio web completo para reservas, visualizacion o contacto de una casa rural realizada para un cliente.
+            Desarrollado con Spring Boot, Thymeleaf, HTML, CSS, JavaScript y MariaDB.Sitio web completo para reservas, visualizacion o contacto de una casa rural realizada para un cliente. Desarrollado con Spring Boot, Thymeleaf, HTML, CSS, JavaScript y MariaDB.
+        </p>
+    </div>
+    <div class="card">
+        <h3>Inventario</h3>
+        <h4>GVO Optics · Contrato temporal</h4>
+        <p>dic. 2025 - ene. 2026 · Móstoles · Presencial</p>
+        <p>
+            Contrato temporal donde hice tareas de mozo, inventario y realización de pedidos.Contrato temporal donde hice tareas de mozo, inventario y realización de pedidos.
+        </p>
+    </div>
+    <div class="card">
+        <h3>Estudiante en prácticas</h3>
+        <h4>CDS, a Hewlett Packard Enterprise company · Contrato de prácticas</h4>
+        <p>mar. 2025 - jun. 2025 · Las Rozas · Híbrido</p>
+        <p>
+            Persona Referencia: Jairo.Luzon@hpecds.com
+        </p>
+    </div>
 </section>
 
-<section id="experience">
-<h2>Experiencia</h2>
-<div class="card">Entrenador fútbol - A.D. El Norte</div>
-<div class="card">Desarrollador Web - Casa Rural Tomillo</div>
+<section id="projects">
+    <h2><i data-lucide="code-2"></i> Proyectos</h2>
+
+    <div class="card">
+        <img class="project-img" src="images/miiter.png" />
+        <b>Miiter</b>
+        <div class="tags">
+            <span class="tag">Spring Boot</span>
+            <span class="tag">Maven</span>
+            <span class="tag">MySQL</span>
+            <span class="tag">Maven</span>
+            <span class="tag">Thymeleaf</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">CSS</span>
+            <span class="tag">HTML</span>
+            <span class="tag">Git</span>
+        </div>
+        <div class="muted">Gestión deportiva completa. Proyecto web personal donde puedes gestionar y visualizar tu equipo, liga o goleadores, como también otras clasificaciones.</div>
+        <div class="project-links">
+            <a href="#">Ver demo</a>
+            <a href="#">GitHub</a>
+        </div>
+    </div>
+
+    <div class="card">
+        <img class="project-img" src="images/techchallenge.png" />
+        <b>Tech Challenge</b>
+        <div class="tags">
+            <span class="tag">Spring Boot</span>
+            <span class="tag">Maven</span>
+            <span class="tag">MySQL</span>
+            <span class="tag">Maven</span>
+            <span class="tag">Thymeleaf</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">CSS</span>
+            <span class="tag">HTML</span>
+            <span class="tag">Git</span>
+        </div>
+        <div class="muted">Sistema interno de empresa. Proyecto desarrollado para la gestion y visualizacion del Tech Challenge de la empresa CDS, a Hewlett Packard Enterprise durante mis prácticas. Persona Referencia: Jairo.Luzon@hpecds.com</div>
+        <div class="project-links">
+            <a href="#">Ver demo</a>
+            <a href="#">GitHub</a>
+        </div>
+    </div>
 </section>
 
 <section id="about">
-<h2>Sobre mí</h2>
-<div class="card">
-Soy desarrollador web enfocado en backend y sistemas completos.
-Me gusta construir productos reales con impacto.
-</div>
+    <h2><i data-lucide="user-check"></i> Sobre mí</h2>
+    <div class="card">
+        Me llamo Carlos, pero mis amigos me llaman Villegas. Empecé en la programación en 2023 a través del grado superior de desarrollo de aplicaciones web. Actualmente estoy realizando proyectos personales.
+
+        Algunos de mis éxitos incluyen la creación de una web de reservas donde puedes pagar para una casa rural.
+        <img class="sobremi-img" src="images/sobreMi.png" />
+    </div>
 </section>
 
-<section id="contact">
-<h2>Contacto</h2>
-<div class="card">
-📧 cvillcarr@gmail.com<br>
-💻 GitHub: Villegas8Carlos
-</div>
-</section>
+<footer>
+    <h2>
+        <a href="https://www.linkedin.com/in/carlos-villegas-carrizo-desarrollador-web-programador/" target="_blank">
+            Carlos Villegas Carrizo
+        </a>
+    </h2>
 
-<footer>Hecho por Carlos Villegas</footer>
+    <a href="#about">Sobre mí</a>
 
+    <a href="mailto:cvillcarr@gmail.com">Contacto</a>
+</footer>
 
+<script>lucide.createIcons();</script>
 </body>
 </html>
