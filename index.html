@@ -1,265 +1,235 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Carlos Villegas | Desarrollador Web</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Carlos Villegas | Desarrollador Web</title>
 
-  <style>
-    :root{
-      --bg:#0b1220;
-      --card:#111a2e;
-      --text:#e5e7eb;
-      --muted:#94a3b8;
-      --accent:#38bdf8;
-      --border:#1f2a44;
-    }
+<style>
+:root {
+  --bg:#0b1220;
+  --card:#111a2e;
+  --text:#e5e7eb;
+  --muted:#94a3b8;
+  --accent:#38bdf8;
+}
 
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-      font-family:Arial, sans-serif;
-      scroll-behavior:smooth;
-    }
+* {
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, sans-serif;
+  scroll-behavior:smooth;
+}
 
-    body{
-      background:var(--bg);
-      color:var(--text);
-    }
+body {
+  background:var(--bg);
+  color:var(--text);
+}
 
-    /* NAV */
-    nav{
-      position:sticky;
-      top:0;
-      display:flex;
-      justify-content:center;
-      gap:20px;
-      padding:15px;
-      background:rgba(11,18,32,0.9);
-      backdrop-filter:blur(10px);
-      border-bottom:1px solid var(--border);
-      z-index:10;
-    }
+/* NAV */
+nav {
+  position:sticky;
+  top:0;
+  background:rgba(11,18,32,0.9);
+  backdrop-filter:blur(10px);
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  padding:15px;
+  border-bottom:1px solid #1f2a44;
+}
 
-    nav a{
-      color:var(--text);
-      text-decoration:none;
-      font-size:14px;
-    }
+nav a {
+  color:var(--text);
+  text-decoration:none;
+  font-size:14px;
+}
 
-    nav a:hover{
-      color:var(--accent);
-    }
+nav a:hover {
+  color:var(--accent);
+}
 
-    /* HERO */
-    header{
-      text-align:center;
-      padding:100px 20px 60px;
-    }
+/* HERO */
+header {
+  text-align:center;
+  padding:90px 20px 60px;
+}
 
-    .status{
-      display:inline-block;
-      padding:6px 12px;
-      border-radius:999px;
-      background:#1f2937;
-      border:1px solid var(--border);
-      color:var(--accent);
-      font-size:12px;
-      margin-bottom:15px;
-    }
+.badge {
+  display:inline-block;
+  padding:6px 12px;
+  background:#1f2937;
+  border:1px solid #334155;
+  border-radius:999px;
+  color:var(--accent);
+  font-size:12px;
+  margin-bottom:15px;
+}
 
-    h1{
-      font-size:50px;
-    }
+h1 {
+  font-size:48px;
+}
 
-    .subtitle{
-      margin-top:10px;
-      color:var(--muted);
-      font-size:18px;
-    }
+.subtitle {
+  color:var(--muted);
+  margin-top:10px;
+}
 
-    .contact-line{
-      margin-top:15px;
-      color:var(--accent);
-    }
+/* SECTIONS */
+section {
+  max-width:900px;
+  margin:auto;
+  padding:60px 20px;
+}
 
-    /* SECTIONS */
-    section{
-      max-width:950px;
-      margin:auto;
-      padding:60px 20px;
-    }
+h2 {
+  color:var(--accent);
+  margin-bottom:20px;
+}
 
-    h2{
-      color:var(--accent);
-      margin-bottom:20px;
-    }
+/* CARD */
+.card {
+  background:var(--card);
+  padding:20px;
+  border-radius:12px;
+  margin-bottom:15px;
+  border:1px solid #1f2a44;
+  transition:0.2s;
+}
 
-    /* CARD */
-    .card{
-      background:var(--card);
-      padding:20px;
-      border-radius:12px;
-      border:1px solid var(--border);
-      margin-bottom:15px;
-      transition:0.2s;
-    }
+.card:hover {
+  transform:translateY(-3px);
+  border-color:var(--accent);
+}
 
-    .card:hover{
-      transform:translateY(-4px);
-      border-color:var(--accent);
-    }
+.muted {
+  color:var(--muted);
+  font-size:14px;
+}
 
-    .muted{
-      color:var(--muted);
-      font-size:14px;
-      margin-top:5px;
-    }
+/* BADGES */
+.tag {
+  display:inline-block;
+  padding:4px 10px;
+  border-radius:999px;
+  background:#1f2937;
+  border:1px solid #334155;
+  font-size:12px;
+  margin-top:8px;
+  margin-right:5px;
+  color:var(--muted);
+}
+</style>
 
-    /* BADGES */
-    .badge{
-      display:inline-block;
-      margin-top:8px;
-      margin-right:5px;
-      padding:4px 10px;
-      font-size:12px;
-      border-radius:999px;
-      background:#1f2937;
-      border:1px solid #334155;
-      color:var(--muted);
-    }
-
-    /* GRID SKILLS */
-    .skills{
-      display:flex;
-      flex-wrap:wrap;
-      gap:8px;
-    }
-
-    footer{
-      text-align:center;
-      padding:40px;
-      color:var(--muted);
-      border-top:1px solid var(--border);
-    }
-  </style>
 </head>
 
 <body>
 
 <nav>
-  <a href="#experiencia">Experiencia</a>
-  <a href="#proyectos">Proyectos</a>
-  <a href="#skills">Skills</a>
-  <a href="#sobre">Sobre mí</a>
-  <a href="#contacto">Contacto</a>
+<a href="#experiencia">Experiencia</a>
+<a href="#proyectos">Proyectos</a>
+<a href="#sobre">Sobre mí</a>
+<a href="#contacto">Contacto</a>
 </nav>
 
 <header>
-  <div class="status">Disponible para trabajar</div>
-  <h1>Carlos Villegas 👋</h1>
-  <div class="subtitle">Desarrollador Web Full Stack · Java & Spring Boot · Madrid</div>
-  <div class="contact-line">📧 tuemail@ejemplo.com · 💼 LinkedIn</div>
+<div class="badge">Disponible para trabajar</div>
+<h1>Carlos Villegas 👋</h1>
+<div class="subtitle">Desarrollador Web | Java · Spring Boot · MySQL · Frontend</div>
 </header>
 
 <section id="experiencia">
-  <h2>Experiencia</h2>
+<h2>Experiencia</h2>
 
-  <div class="card">
-    <b>Entrenador de fútbol</b>
-    <div class="muted">A.D. El Norte · 2024 - Actualidad</div>
-    <p class="muted">Gestión de equipos, liderazgo, comunicación y desarrollo de jugadores.</p>
-  </div>
+<div class="card">
+<b>Entrenador de fútbol</b><br>
+<span class="muted">A.D. El Norte · 2024 - Actualidad</span>
+<p class="muted">
+Gestión de equipos Prebenjamines, liderazgo, comunicación y trabajo en equipo.
+</p>
+</div>
 
-  <div class="card">
-    <b>Desarrollador Web</b>
-    <div class="muted">Casa Rural Tomillo · 2025 - 2026</div>
-    <p class="muted">Aplicación completa con Spring Boot, Thymeleaf, MySQL, HTML, CSS y JS.</p>
-  </div>
+<div class="card">
+<b>Desarrollador Web</b><br>
+<span class="muted">Casa Rural Tomillo · 2025 - 2026</span>
+<p class="muted">
+Sistema completo de reservas con Spring Boot, Thymeleaf, HTML, CSS, JS y MariaDB.
+</p>
+<span class="tag">Spring Boot</span>
+<span class="tag">Thymeleaf</span>
+<span class="tag">MariaDB</span>
+</div>
 
-  <div class="card">
-    <b>Prácticas DAW</b>
-    <div class="muted">CDS (HPE) · 2025</div>
-    <p class="muted">Desarrollo de funcionalidades web y soporte técnico en entorno real.</p>
-  </div>
+<div class="card">
+<b>Prácticas Desarrollo Web</b><br>
+<span class="muted">CDS (HPE) · 2025</span>
+<p class="muted">
+Desarrollo de funcionalidades web internas y gestión de aplicaciones con Java.
+</p>
+</div>
 
-  <div class="card">
-    <b>Inventario / Logística</b>
-    <div class="muted">GVO Optics · 2025</div>
-    <p class="muted">Gestión de stock, pedidos y operaciones de almacén.</p>
-  </div>
+<div class="card">
+<b>Mozo de almacén</b><br>
+<span class="muted">GVO Optics · 2025</span>
+<p class="muted">
+Inventario, preparación de pedidos y gestión logística.
+</p>
+</div>
+
 </section>
 
 <section id="proyectos">
-  <h2>Proyectos</h2>
+<h2>Proyectos</h2>
 
-  <div class="card">
-    <b>Miiter</b>
-    <div>
-      <span class="badge">Spring Boot</span>
-      <span class="badge">Java</span>
-      <span class="badge">MySQL</span>
-    </div>
-    <p class="muted">Gestión de equipos, ligas y estadísticas deportivas.</p>
-  </div>
+<div class="card">
+<b>Miiter</b>
+<p class="muted">Gestión de equipos, ligas y estadísticas deportivas.</p>
+<span class="tag">Spring Boot</span>
+<span class="tag">Java</span>
+<span class="tag">MySQL</span>
+</div>
 
-  <div class="card">
-    <b>Tech Challenge</b>
-    <div>
-      <span class="badge">Spring Boot</span>
-      <span class="badge">Thymeleaf</span>
-    </div>
-    <p class="muted">Sistema de gestión de retos técnicos.</p>
-  </div>
+<div class="card">
+<b>Tech Challenge HPE</b>
+<p class="muted">Sistema de gestión de retos durante prácticas en empresa.</p>
+<span class="tag">Spring Boot</span>
+<span class="tag">Java</span>
+<span class="tag">MariaDB</span>
+</div>
 
-  <div class="card">
-    <b>TFG</b>
-    <p class="muted">Proyecto final de ciclo DAW full-stack.</p>
-  </div>
-</section>
+<div class="card">
+<b>Casa Rural</b>
+<p class="muted">Web de reservas y gestión completa para cliente real.</p>
+<span class="tag">Spring Boot</span>
+<span class="tag">Thymeleaf</span>
+<span class="tag">JS</span>
+</div>
 
-<section id="skills">
-  <h2>Skills</h2>
-
-  <div class="card">
-    <div class="skills">
-      <span class="badge">Java</span>
-      <span class="badge">Spring Boot</span>
-      <span class="badge">Thymeleaf</span>
-      <span class="badge">MySQL</span>
-      <span class="badge">HTML</span>
-      <span class="badge">CSS</span>
-      <span class="badge">JavaScript</span>
-      <span class="badge">Git</span>
-      <span class="badge">Docker</span>
-      <span class="badge">React (básico)</span>
-    </div>
-  </div>
 </section>
 
 <section id="sobre">
-  <h2>Sobre mí</h2>
+<h2>Sobre mí</h2>
 
-  <div class="card">
-    Desarrollador web especializado en Java y Spring Boot. Me gusta construir aplicaciones completas,
-    trabajar con bases de datos y desarrollar interfaces modernas. Busco mi primera oportunidad laboral en el sector IT.
-  </div>
+<div class="card">
+Desarrollador Web con experiencia en Java y Spring Boot.
+He trabajado en proyectos reales con bases de datos, frontend y backend.
+
+Me gusta crear aplicaciones completas, aprender nuevas tecnologías y trabajar en equipo.
+</div>
+
 </section>
 
 <section id="contacto">
-  <h2>Contacto</h2>
+<h2>Contacto</h2>
 
-  <div class="card">
-    📧 Email: tuemail@ejemplo.com<br>
-    💼 LinkedIn: tu-linkedin<br>
-    🧑‍💻 GitHub: Villegas8Carlos
-  </div>
+<div class="card">
+📧 Email: cvillcarr@gmail.com<br>
+💼 LinkedIn: https://www.linkedin.com/in/carlos-villegas-carrizo-desarrollador-web-programador/<br>
+💻 GitHub: Villegas8Carlos
+</div>
+
 </section>
-
-<footer>
-  © 2026 Carlos Villegas · Portfolio
-</footer>
 
 </body>
 </html>
