@@ -338,3 +338,69 @@ a:hover{
   border-color:var(--accent);
   transform:scale(1.05);
 }
+
+
+.tags{
+  margin-top:12px;
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+}
+
+.tag{
+  display:flex;
+  align-items:center;
+  gap:6px;
+  font-size:12px;
+  padding:6px 10px;
+  border-radius:999px;
+  border:1px solid transparent;
+  font-weight:500;
+  transition:0.2s;
+}
+
+/* HOVER */
+.tag:hover{
+  transform:translateY(-2px);
+}
+
+/* COLORES POR TECNOLOGÍA */
+
+.tag.spring{
+  background:rgba(34,197,94,0.12);
+  color:#22c55e;
+}
+
+.tag.thymeleaf{
+  background:rgba(249,115,22,0.12);
+  color:#f97316;
+}
+
+.tag.db{
+  background:rgba(59,130,246,0.12);
+  color:#3b82f6;
+}
+
+.tag.html{
+  background:rgba(239,68,68,0.12);
+  color:#ef4444;
+}
+
+.tag.css{
+  background:rgba(14,165,233,0.12);
+  color:#0ea5e9;
+}
+
+.tag.js{
+  background:rgba(234,179,8,0.12);
+  color:#eab308;
+}
+
+.tag.git{
+  background:rgba(244,63,94,0.12);
+  color:#f43f5e;
+}
+
+.tag:hover{
+  box-shadow:0 0 10px currentColor;
+}
