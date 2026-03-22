@@ -29,6 +29,8 @@ body{
   color:var(--text);
   background: var(--bg);
   transition:0.3s;
+  font-family: Onest Variable, system-ui, sans-serif;
+  scroll-behavior: smooth;
 }
 
 /* NAV */

@@ -1,13 +1,13 @@
 // THEME SYSTEM (system + toggle)
 function setTheme(mode){
   if(mode === "dark"){
-    document.body.classList.add("light");
-    localStorage.setItem("theme","light");
+    document.body.classList.add("dark");
+    localStorage.setItem("theme","dark");
   }
 
   if(mode === "light"){
     document.body.classList.remove("light");
-    localStorage.setItem("theme","dark");
+    localStorage.setItem("theme","light");
   }
 
   if(mode === "system"){
