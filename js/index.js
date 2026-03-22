@@ -36,11 +36,6 @@ function setTheme(mode){
   }
 })();
 
-// load theme
-if(localStorage.getItem('theme')==='light'){
-  document.body.classList.add('light');
-}
-
 // SCROLL REVEAL (stagger)
 const cards = document.querySelectorAll('.card');
 
