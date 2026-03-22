@@ -1,12 +1,11 @@
-// THEME SYSTEM (system + toggle)
 function setTheme(mode){
   if(mode === "dark"){
-    document.body.classList.add("dark");
+    document.body.classList.remove("light");
     localStorage.setItem("theme","dark");
   }
 
   if(mode === "light"){
-    document.body.classList.remove("light");
+    document.body.classList.add("light");
     localStorage.setItem("theme","light");
   }
 
@@ -27,6 +26,10 @@ function setTheme(mode){
 
   if(saved === "light"){
     document.body.classList.add("light");
+  }
+
+  if(saved === "dark"){
+    document.body.classList.remove("light");
   }
 
   if(!saved){

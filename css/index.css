@@ -17,11 +17,15 @@ body.light{
   --line:#e2e8f0;
 }
 
+body:not(.light) .card{
+  box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+}
+
 *{
   margin:0;
   padding:0;
   box-sizing:border-box;
-  font-family:system-ui,Arial;
+  font-family:"Onest Variable", "Onest", system-ui, sans-serif;
   scroll-behavior:smooth;
 }
 
@@ -139,13 +143,13 @@ h2{color:var(--accent);margin-bottom:25px}
 /* CARD + STAGGER */
 .card{
   background:var(--card);
-  border:1px solid var(--line);
   padding:20px;
   border-radius:14px;
   margin-bottom:15px;
   opacity:0;
   transform:translateY(25px);
   transition:0.6s;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
 }
 
 .card.show{
@@ -210,17 +214,34 @@ h2{color:var(--accent);margin-bottom:25px}
   padding:6px;
 }
 
-footer{text-align:center;padding:50px;color:var(--muted)}
+.footer{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:40px 20px;
+  color:var(--muted);
+  max-width:1000px;
+  margin:auto;
+  flex-wrap:wrap;
+  gap:10px;
+}
 
-
-nav a,
-.btn,
-h2,
-.project-links a{
+.footer-left,
+.footer-right{
   display:flex;
   align-items:center;
-  gap:6px;
+  gap:12px;
 }
+
+.footer a{
+  color:var(--text);
+  text-decoration:none;
+}
+
+.footer a:hover{
+  color:var(--accent);
+}
+
 
 nav a,
 .btn,
@@ -252,3 +273,11 @@ nav a{
   border-radius:8px;
 }
 
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+a:hover{
+  text-decoration:none;
+}
