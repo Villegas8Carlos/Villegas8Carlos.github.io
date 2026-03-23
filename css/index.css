@@ -475,8 +475,6 @@ a:hover{
 }
 
 .about-text{
-  flex:1.2;
-  display:flex;
   align-items:center;
   font-size:16px;
   line-height:1.7;
@@ -489,11 +487,6 @@ a:hover{
 
 .subtitle p{
   margin-bottom:10px;
-}
-
-.card p:first-of-type{
-  color:var(--muted);
-  font-size:13px;
 }
 
 .about-text p{
