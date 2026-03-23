@@ -459,21 +459,48 @@ a:hover{
   cursor: pointer;
 }
 
-<ul class="project-details">
-  <li>Arquitectura MVC</li>
-  <li>Base de datos relacional</li>
-  <li>CRUD completo</li>
-  <li>Diseño responsive</li>
-</ul>
+.project-img{
+  cursor:pointer;
+}
+
+.muted p{
+  margin-bottom:8px;
+}
+
+.muted{
+  color:var(--text);      /* antes var(--muted) */
+  font-size:15px;         /* antes 14px */
+  margin-top:8px;
+  line-height:1.6;
+}
 
 .about-text{
   flex:1.2;
   display:flex;
   align-items:center;
-  font-size:15px;
-  line-height:1.6;
+  font-size:16px;
+  line-height:1.7;
+  max-width:600px;
 }
 
-.project-img{
-  cursor:pointer;
+.project-img:hover{
+  filter:brightness(1.1);
+}
+
+.subtitle p{
+  margin-bottom:10px;
+}
+
+.card p:first-of-type{
+  color:var(--muted);
+  font-size:13px;
+}
+
+.about-text p{
+  margin-bottom:10px;
+}
+
+.card:hover{
+  transform:translateY(-5px);
+  border:1px solid var(--accent);
 }
