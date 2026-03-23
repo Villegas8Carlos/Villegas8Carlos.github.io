@@ -299,23 +299,6 @@ a:hover{
   border:1px solid var(--line);
 }
 
-.about-wrapper{
-  display:flex;
-  gap:20px;
-  align-items:stretch;
-}
-
-.about-text{
-  flex:1;
-}
-
-.about-img{
-  width:280px;
-  border-radius:14px;
-  object-fit:cover;
-  border:1px solid var(--line);
-}
-
 .theme-toggle{
   display:flex;
   gap:8px;
@@ -423,10 +406,6 @@ a:hover{
     margin-top:5px;
   }
 
-  header{
-    padding-top:80px;
-  }
-
   header {
     padding-top: 100px;
   }
@@ -478,4 +457,23 @@ a:hover{
 
 .theme-toggle button {
   cursor: pointer;
+}
+
+<ul class="project-details">
+  <li>Arquitectura MVC</li>
+  <li>Base de datos relacional</li>
+  <li>CRUD completo</li>
+  <li>Diseño responsive</li>
+</ul>
+
+.about-text{
+  flex:1.2;
+  display:flex;
+  align-items:center;
+  font-size:15px;
+  line-height:1.6;
+}
+
+.project-img{
+  cursor:pointer;
 }
