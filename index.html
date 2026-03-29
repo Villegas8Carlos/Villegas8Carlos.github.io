@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -39,7 +39,7 @@
 </nav>
 
 <header id="home">
-    <img class="photo" src="./images/fotoCV.jpeg" />
+    <img class="photo" src="./images/fotoCV.jpeg" alt="fotoCV"/>
     <a class="status-badge" href="https://www.linkedin.com/in/carlos-villegas-carrizo-desarrollador-web-programador/" target="_blank">Disponible para trabajar</a>
     <div class="subtitle">
         <p>Soy desarrollador web y comencé en programación en 2023 a través del Grado Superior en Desarrollo de Aplicaciones Web.</p>
@@ -51,7 +51,7 @@
         </a>
         <a class="btn secondary" href="/files/CV_CarlosVillegas.pdf" target="_blank">Ver CV</a>
         <a class="btn secondary" href="https://www.linkedin.com/in/carlos-villegas-carrizo-desarrollador-web-programador/" target="_blank">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
                 <path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.11 1 2.5 1s2.48 1.12 2.48 2.5zM.22 8h4.56v14H.22V8zm7.75 0h4.37v1.92h.06c.61-1.16 2.1-2.38 4.33-2.38 4.63 0 5.48 3.05 5.48 7.02V22h-4.56v-6.7c0-1.6-.03-3.66-2.23-3.66-2.23 0-2.57 1.74-2.57 3.54V22H7.97V8z"/>
             </svg>
             LinkedIn
@@ -88,7 +88,7 @@
         <p> - Integración de pagos online mediante Stripe.</p>
         <p> - Envío automático de correos electrónicos de confirmación.</p>
         <p> - Aplicación desplegada en servidor y accesible públicamente.</p>
-        <a href="https://casaruraltomillo.es/" target="_blank"><img class="project-img" src="./images/casarural.png" /></a>
+        <a href="https://casaruraltomillo.es/" target="_blank"><img class="project-img" src="./images/casarural.png" alt="casarural"/></a>
     </div>
     <div class="card">
         <h3>Inventario</h3>
@@ -120,7 +120,35 @@
     <h2><i data-lucide="code-2"></i> Proyectos</h2>
 
     <div class="card">
-        <img class="project-img" src="./images/miiter.png" />
+        <img class="project-img" src="./images/portfolio.png" alt="portfolio"/>
+        <h3>Portfolio</h3>
+        <div class="tags">
+            <span class="tag html">
+            <i data-lucide="code"></i> HTML
+          </span>
+            <span class="tag css">
+            <i data-lucide="palette"></i> CSS
+          </span>
+            <span class="tag js">
+            <i data-lucide="cpu"></i> JavaScript
+          </span>
+        </div>
+        <div class="muted">
+            <p>Portfolio personal desarrollado desde cero para mostrar experiencia, proyectos y habilidades como desarrollador web.</p>
+            <p>Incluye modo claro/oscuro, animaciones, diseño responsive y optimización visual.</p>
+        </div>
+        <div class="project-links">
+            <a href="" target="_blank">
+                <i data-lucide="external-link"></i> Demo
+            </a>
+            <a href="https://github.com/Villegas8Carlos/Villegas8Carlos.github.io" target="_blank">
+                <i data-lucide="github"></i> Ver código
+            </a>
+        </div>
+    </div>
+
+    <div class="card">
+        <img class="project-img" src="./images/miiter.png" alt="miiter"/>
         <h3>Miiter</h3>
         <div class="tags">
           <span class="tag spring">
@@ -156,12 +184,17 @@
             <p> - Actualización dinámica de la información en función de los resultados y datos introducidos.</p>
         </div>
         <div class="project-links">
-            <span class="private">🔒 Proyecto privado (código no público)</span>
+            <a href="" target="_blank">
+                <i data-lucide="external-link"></i> Demo
+            </a>
+            <a href="https://github.com/Villegas8Carlos/Miiter" target="_blank">
+                <i data-lucide="github"></i> Ver código
+            </a>
         </div>
     </div>
 
     <div class="card">
-        <img class="project-img" src="./images/techchallenge.png" />
+        <img class="project-img" src="./images/techchallenge.png" alt="techchallenge"/>
         <h3>Tech Challenge</h3>
         <h5>CDS, an HPE Company | 2025</h5>
         <div class="tags">
@@ -210,7 +243,7 @@
             <p>He trabajado en proyectos reales y personales implementando lógica de negocio, integración con bases de datos y diseño responsive.</p>
             <p>Busco mi primera oportunidad laboral donde seguir creciendo como desarrollador y aportar compromiso, aprendizaje continuo y trabajo en equipo.</p>
         </div>
-        <img class="about-img" src="./images/foto.jpeg" />
+        <img class="about-img" src="./images/foto.jpeg" alt="foto"/>
     </div>
 </section>
 
