@@ -18,10 +18,10 @@
 <body>
 
 <nav>
-    <a href="#experience">Experiencia</a>
-    <a href="#projects">Proyectos</a>
-    <a href="#about">Sobre mí</a>
-    <a href="mailto:cvillcarr@gmail.com">Contacto</a>
+    <a href="#experience" data-es="Experiencia" data-en="Experience">Experiencia</a>
+    <a href="#projects" data-es="Proyectos" data-en="Projects">Proyectos</a>
+    <a href="#about" data-es="Sobre mí" data-en="About me">Sobre mí</a>
+    <a href="mailto:cvillcarr@gmail.com" data-es="Contacto" data-en="Contact">Contacto</a>
 
     <div class="theme-toggle">
         <button onclick="setTheme('light')">
@@ -36,20 +36,35 @@
             <i data-lucide="monitor"></i>
         </button>
     </div>
+
+    <div class="lang-toggle">
+        <button onclick="setLang('es')">ES</button>
+        <button onclick="setLang('en')">EN</button>
+    </div>
 </nav>
 
 <header id="home">
     <img class="photo" src="./images/fotoCV.jpeg" alt="fotoCV"/>
-    <a class="status-badge" href="https://www.linkedin.com/in/carlos-villegas-carrizo-desarrollador-web-programador/" target="_blank">Disponible para trabajar</a>
+    <a class="status-badge" href="https://www.linkedin.com/in/carlos-villegas-carrizo-desarrollador-web-programador/" target="_blank" data-es="Disponible para trabajar" data-en="Open to work">Disponible para trabajar</a>
     <div class="subtitle">
-        <p>Soy desarrollador web y comencé en programación en 2023 a través del Grado Superior en Desarrollo de Aplicaciones Web.</p>
-        <p>Actualmente, desarrollo proyectos personales y trabajos reales, como una web de reservas con sistema de pago para una casa rural.</p>
+        <p data-es="Soy desarrollador web y comencé en programación en 2023 a través del Grado Superior en Desarrollo de Aplicaciones Web."
+           data-en="I am a web developer and started programming in 2023 through a Higher Degree in Web Application Development.">
+            Soy desarrollador web y comencé en programación en 2023 a través del Grado Superior en Desarrollo de Aplicaciones Web.
+        </p>
+        <p data-es="Actualmente, desarrollo proyectos personales y trabajos reales, como una web de reservas con sistema de pago para una casa rural."
+           data-en="Currently, I develop personal projects and real-world applications, such as a booking website with payment system for a rural house.">
+            Actualmente, desarrollo proyectos personales y trabajos reales, como una web de reservas con sistema de pago para una casa rural.
+        </p>
     </div>
+
     <div class="cta">
         <a class="btn primary" href="mailto:cvillcarr@gmail.com">
             <i data-lucide="mail"></i> cvillcarr@gmail.com
         </a>
-        <a class="btn secondary" href="/files/CV_CarlosVillegas.pdf" target="_blank">Ver CV</a>
+        <a class="btn secondary" href="/files/CV_CarlosVillegas.pdf" target="_blank"
+           data-es="Ver CV" data-en="View CV">
+            Ver CV
+        </a>
         <a class="btn secondary" href="https://github.com/Villegas8Carlos" target="_blank">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
                 <path d="M12 .5C5.73.5.75 5.6.75 12c0 5.1 3.29 9.43 7.86 10.96.57.1.78-.25.78-.55v-2.1c-3.2.72-3.88-1.57-3.88-1.57-.52-1.35-1.28-1.71-1.28-1.71-1.05-.73.08-.72.08-.72 1.16.08 1.77 1.22 1.77 1.22 1.04 1.81 2.73 1.29 3.4.99.1-.76.4-1.29.72-1.59-2.55-.29-5.23-1.3-5.23-5.8 0-1.28.46-2.33 1.22-3.15-.12-.3-.53-1.52.12-3.16 0 0 1-.32 3.3 1.2a11.4 11.4 0 0 1 3-.4c1.02 0 2.05.14 3 .4 2.3-1.52 3.3-1.2 3.3-1.2.65 1.64.24 2.86.12 3.16.76.82 1.22 1.87 1.22 3.15 0 4.51-2.69 5.5-5.25 5.79.41.36.77 1.08.77 2.19v3.24c0 .3.21.65.79.54A10.51 10.51 0 0 0 23.25 12C23.25 5.6 18.27.5 12 .5z"/>
@@ -66,55 +81,142 @@
 </header>
 
 <section id="experience">
-    <h2><i data-lucide="briefcase"></i> Experiencia laboral</h2>
+    <h2><i data-lucide="briefcase"></i>
+        <span data-es="Experiencia laboral" data-en="Work Experience">
+            Experiencia laboral
+        </span>
+    </h2>
     <div class="card">
-        <h3>Entrenador fútbol</h3>
+        <h3 data-es="Entrenador fútbol" data-en="Football Coach">Entrenador fútbol</h3>
         <h4>A.D. El Norte</h4>
-        <p>sept. 2024 - actualidad · Getafe · Presencial</p>
-        <p>Entrenador de categorías base, responsable de la planificación de entrenamientos y la gestión de grupos de jugadores en edad formativa.</p>
-        <p> - Organización y preparación de sesiones de entrenamiento.</p>
-        <p> - Gestión de equipos y trabajo en equipo con otros entrenadores.</p>
-        <p> - Desarrollo de habilidades técnicas y valores deportivos en jugadores.</p>
-        <p> - Comunicación constante con jugadores y coordinación con el club.</p>
+        <p data-es="sept. 2024 - actualidad · Getafe · Presencial"    data-en="Sep 2024 - Present · Getafe · On-site">
+            sept. 2024 - actualidad · Getafe · Presencial
+        </p>
+        <p data-es="Entrenador de categorías base, responsable de la planificación de entrenamientos y la gestión de grupos de jugadores en edad formativa."
+           data-en="Coach of youth categories, responsible for planning training sessions and managing groups of players at formative age.">
+            Entrenador de categorías base, responsable de la planificación de entrenamientos y la gestión de grupos de jugadores en edad formativa.
+        </p>
+        <p></p>
+        <p data-es=" - Organización y preparación de sesiones de entrenamiento."
+           data-en="- Organization and preparation of training sessions.">
+            - Organización y preparación de sesiones de entrenamiento.
+        </p>
+        <p data-es=" - Gestión de equipos y trabajo en equipo con otros entrenadores."
+           data-en="- Team management and teamwork with other coaches.">
+            - Gestión de equipos y trabajo en equipo con otros entrenadores.
+        </p>
+        <p data-es=" - Desarrollo de habilidades técnicas y valores deportivos en jugadores."
+           data-en="- Development of technical skills and sporting values in players.">
+            - Desarrollo de habilidades técnicas y valores deportivos en jugadores.
+        </p>
+        <p data-es=" - Comunicación constante con jugadores y coordinación con el club."
+           data-en="- Constant communication with players and coordination with the club.">
+            - Comunicación constante con jugadores y coordinación con el club.
+        </p>
         <p>
-            2024/2025: Debutante
+            <span data-es="2024/2025: Debutante" data-en="2024/2025: U6 (Beginner)">
+                2024/2025: Debutante
+            </span>
             <br>
-            2025/2026: Prebenjamines
+            <span data-es="2025/2026: Prebenjamines" data-en="2025/2026: U8 (Pre-Benjamin)">
+                2025/2026: Prebenjamines
+            </span>
         </p>
     </div>
     <div class="card">
-        <h3>Desarrollador web</h3>
+        <h3 data-es="Desarrollador web" data-en="Web Developer">Desarrollador web</h3>
         <h4>Casa Rural Tomillo</h4>
-        <p>jul. 2025 - mar. 2026 · Navalcán · Híbrido</p>
-        <p>Desarrollo de una plataforma web completa para la gestión de reservas de una casa rural, incluyendo administración de disponibilidad, gestión de precios y sistema de pago para clientes.</p>
-        <p> - Desarrollo del backend con Spring Boot y del frontend con Thymeleaf, HTML, CSS y JavaScript.</p>
-        <p> - Implementación de sistema de autenticación para administradores con gestión de reservas.</p>
-        <p> - Integración de base de datos MySQL para la gestión de reservas, usuarios, precios y disponibilidad.</p>
-        <p> - Sistema de calendario de disponibilidad y gestión dinámica de precios con reglas personalizadas, incluyendo modificación de precios por día.</p>
-        <p> - Integración de pagos online mediante Stripe.</p>
-        <p> - Envío automático de correos electrónicos de confirmación.</p>
-        <p> - Aplicación desplegada en servidor y accesible públicamente.</p>
+        <p data-es="jul. 2025 - mar. 2026 · Navalcán · Híbrido" data-en="Jul 2025 - Mar 2026 · Navalcán · Hybrid">
+            jul. 2025 - mar. 2026 · Navalcán · Híbrido
+        </p>
+        <p data-es="Desarrollo de una plataforma web completa para la gestión de reservas de una casa rural, incluyendo administración de disponibilidad, gestión de precios y sistema de pago para clientes."
+           data-en="Development of a complete web platform for managing reservations for a rural house, including availability management, price management and payment system for clients.">
+            Desarrollo de una plataforma web completa para la gestión de reservas de una casa rural, incluyendo administración de disponibilidad, gestión de precios y sistema de pago para clientes.
+        </p>
+        <p data-es=" - Desarrollo del backend con Spring Boot y del frontend con Thymeleaf, HTML, CSS y JavaScript."
+           data-en="- Backend development with Spring Boot and frontend development with Thymeleaf, HTML, CSS and JavaScript.">
+            - Desarrollo del backend con Spring Boot y del frontend con Thymeleaf, HTML, CSS y JavaScript.
+        </p>
+        <p data-es=" - Implementación de sistema de autenticación para administradores con gestión de reservas."
+           data-en="- Implementation of an authentication system for administrators with reservation management.">
+            - Implementación de sistema de autenticación para administradores con gestión de reservas.
+        </p>
+        <p data-es=" - Integración de base de datos MySQL para la gestión de reservas, usuarios, precios y disponibilidad."
+           data-en="- MySQL database integration for managing reservations, users, prices, and availability.">
+            - Integración de base de datos MySQL para la gestión de reservas, usuarios, precios y disponibilidad.
+        </p>
+        <p data-es=" - Sistema de calendario de disponibilidad y gestión dinámica de precios con reglas personalizadas, incluyendo modificación de precios por día."
+           data-en="- Availability calendar system and dynamic price management with customized rules, including daily price changes.">
+            - Sistema de calendario de disponibilidad y gestión dinámica de precios con reglas personalizadas, incluyendo modificación de precios por día.
+        </p>
+        <p data-es=" - Integración de pagos online mediante Stripe."
+           data-en="- Integration of online payments via Stripe.">
+            - Integración de pagos online mediante Stripe.
+        </p>
+        <p data-es=" - Envío automático de correos electrónicos de confirmación."
+           data-en="- Automatic sending of confirmation emails.">
+            - Envío automático de correos electrónicos de confirmación.
+        </p>
+        <p data-es=" - Aplicación desplegada en servidor y accesible públicamente."
+           data-en="- Application deployed on a server and publicly accessible.">
+            - Aplicación desplegada en servidor y accesible públicamente.
+        </p>
         <a href="https://casaruraltomillo.es/" target="_blank"><img class="project-img" src="./images/casarural.png" alt="casarural"/></a>
     </div>
     <div class="card">
-        <h3>Inventario</h3>
-        <h4>GVO Optics · Contrato temporal</h4>
-        <p>dic. 2025 - ene. 2026 · Móstoles · Presencial</p>
-        <p>Contrato temporal realizando tareas logísticas y de gestión de inventario.</p>
-        <p> - Control y organización de stock.</p>
-        <p> - Preparación de pedidos.</p>
-        <p> - Apoyo en tareas logísticas del almacén.</p>
-        <p> - Manejo de inventario y verificación de mercancía.</p>
+        <h3 data-es="Inventario" data-en="Inventory">Inventario</h3>
+        <h4 data-es="GVO Optics · Contrato temporal" data-en="GVO Optics · Temporary contract">
+            GVO Optics · Contrato temporal
+        </h4>
+        <p data-es="dic. 2025 - ene. 2026 · Móstoles · Presencial"    data-en="Dec 2025 - Jan 2026 · Móstoles · On-site">
+            dic. 2025 - ene. 2026 · Móstoles · Presencial
+        </p>
+        <p data-es="Contrato temporal realizando tareas logísticas y de gestión de inventario."
+           data-en="Temporary contract performing logistics and inventory management tasks.">
+            Contrato temporal realizando tareas logísticas y de gestión de inventario.
+        </p>
+        <p data-es=" - Control y organización de stock."
+           data-en="- Stock control and organization.">
+            - Control y organización de stock.
+        </p>
+        <p data-es=" - Preparación de pedidos."
+           data-en="- Order preparation.">
+            - Preparación de pedidos.
+        </p>
+        <p data-es=" - Apoyo en tareas logísticas del almacén."
+           data-en="- Support in warehouse logistics tasks.">
+            - Apoyo en tareas logísticas del almacén.
+        </p>
+        <p data-es=" - Manejo de inventario y verificación de mercancía."
+           data-en="- Inventory management and merchandise verification.">
+            - Manejo de inventario y verificación de mercancía.
+        </p>
     </div>
     <div class="card">
-        <h3>Estudiante en prácticas</h3>
-        <h4>CDS, a Hewlett Packard Enterprise company · Contrato de prácticas</h4>
-        <p>mar. 2025 - jun. 2025 · Las Rozas · Híbrido</p>
-        <p>Participación en el desarrollo de un sistema interno para la gestión y visualización del Tech Challenge de la empresa.</p>
-        <p>Desarrollo de una aplicación web utilizando Spring Boot, Thymeleaf y MySQL, implementando funcionalidades de administración, gestión de usuarios y visualización de datos.</p>
-        <p>Proyecto desarrollado en un entorno colaborativo, aplicando control de versiones con Git y buenas prácticas de desarrollo.</p>
+        <h3 data-es="Estudiante en prácticas" data-en="Student intern">Estudiante en prácticas</h3>
+        <h4 data-es="CDS, a Hewlett Packard Enterprise company · Contrato de prácticas" data-en="CDS, a Hewlett Packard Enterprise company · Internship">
+            CDS, a Hewlett Packard Enterprise company · Contrato de prácticas
+        </h4>
+        <p data-es="mar. 2025 - jun. 2025 · Las Rozas · Híbrido"     data-en="Mar 2025 - Jun 2025 · Las Rozas · Hybrid">
+            mar. 2025 - jun. 2025 · Las Rozas · Híbrido
+        </p>
+        <p data-es="Participación en el desarrollo de un sistema interno para la gestión y visualización del Tech Challenge de la empresa."
+           data-en="Participation in the development of an internal system for the management and visualization of the company's Tech Challenge.">
+            Participación en el desarrollo de un sistema interno para la gestión y visualización del Tech Challenge de la empresa.
+        </p>
+        <p data-es="Desarrollo de una aplicación web utilizando Spring Boot, Thymeleaf y MySQL, implementando funcionalidades de administración, gestión de usuarios y visualización de datos."
+           data-en="Development of a web application using Spring Boot, Thymeleaf and MySQL, implementing functionalities for administration, user management and data visualization.">
+            Desarrollo de una aplicación web utilizando Spring Boot, Thymeleaf y MySQL, implementando funcionalidades de administración, gestión de usuarios y visualización de datos.
+        </p>
+        <p></p>
+        <p data-es="Proyecto desarrollado en un entorno colaborativo, aplicando control de versiones con Git y buenas prácticas de desarrollo."
+           data-en="Project developed in a collaborative environment, applying version control with Git and good development practices.">
+            Proyecto desarrollado en un entorno colaborativo, aplicando control de versiones con Git y buenas prácticas de desarrollo.
+        </p>
         <p>
-            Persona Referencia:
+            <span data-es="Persona Referencia:" data-en="Reference Person:">
+                Persona Referencia:
+            </span>
             <a class="btn primary" style="background:none" href="mailto:Jairo.Luzon@hpecds.com">
                 <i data-lucide="mail"></i> Jairo.Luzon@hpecds.com
             </a>
@@ -123,7 +225,11 @@
 </section>
 
 <section id="projects">
-    <h2><i data-lucide="code-2"></i> Proyectos</h2>
+    <h2><i data-lucide="code-2"></i>
+        <span data-es="Proyectos" data-en="Projects">
+            Proyectos
+        </span>
+    </h2>
 
     <div class="card">
         <img class="project-img" src="./images/portfolio.png" alt="portfolio"/>
@@ -140,8 +246,14 @@
           </span>
         </div>
         <div class="muted">
-            <p>Portfolio personal desarrollado desde cero para mostrar experiencia, proyectos y habilidades como desarrollador web.</p>
-            <p>Incluye modo claro/oscuro, animaciones, diseño responsive y optimización visual.</p>
+            <p data-es="Portfolio personal desarrollado desde cero para mostrar experiencia, proyectos y habilidades como desarrollador web."
+               data-en="Personal portfolio built from scratch to showcase experience, projects and skills as a web developer.">
+                Portfolio personal desarrollado desde cero para mostrar experiencia, proyectos y habilidades como desarrollador web.
+            </p>
+            <p data-es="Incluye modo claro/oscuro, animaciones, diseño responsive y optimización visual."
+               data-en="Includes light/dark mode, animations, responsive design and visual optimization.">
+                Incluye modo claro/oscuro, animaciones, diseño responsive y optimización visual.
+            </p>
         </div>
         <div class="project-links">
             <a href="" target="_blank">
@@ -151,7 +263,7 @@
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
                     <path d="M12 .5C5.73.5.75 5.6.75 12c0 5.1 3.29 9.43 7.86 10.96.57.1.78-.25.78-.55v-2.1c-3.2.72-3.88-1.57-3.88-1.57-.52-1.35-1.28-1.71-1.28-1.71-1.05-.73.08-.72.08-.72 1.16.08 1.77 1.22 1.77 1.22 1.04 1.81 2.73 1.29 3.4.99.1-.76.4-1.29.72-1.59-2.55-.29-5.23-1.3-5.23-5.8 0-1.28.46-2.33 1.22-3.15-.12-.3-.53-1.52.12-3.16 0 0 1-.32 3.3 1.2a11.4 11.4 0 0 1 3-.4c1.02 0 2.05.14 3 .4 2.3-1.52 3.3-1.2 3.3-1.2.65 1.64.24 2.86.12 3.16.76.82 1.22 1.87 1.22 3.15 0 4.51-2.69 5.5-5.25 5.79.41.36.77 1.08.77 2.19v3.24c0 .3.21.65.79.54A10.51 10.51 0 0 0 23.25 12C23.25 5.6 18.27.5 12 .5z"/>
                 </svg>
-                Ver código
+                <span data-es="Ver código" data-en="View code">Ver código</span>
             </a>
         </div>
     </div>
@@ -183,14 +295,38 @@
           </span>
         </div>
         <div class="muted">
-            <p>Desarrollo de una aplicación web completa para la gestión de equipos y competiciones deportivas, permitiendo administrar jugadores, partidos y estadísticas, así como visualizar clasificaciones y rankings de rendimiento en tiempo real.</p>
-            <p>- Desarrollo del backend con Spring Boot, implementando la lógica de negocio para la gestión de equipos, partidos y cálculo automático de estadísticas.</p>
-            <p> - Implementación de sistema de autenticación y autorización de usuarios mediante Spring Security, incluyendo gestión de roles.</p>
-            <p> - Diseño del frontend con HTML, CSS, JavaScript y Thymeleaf, enfocado en una visualización dinámica e intuitiva de los datos.</p>
-            <p> - Integración de base de datos relacional MySQL, modelando entidades y relaciones para la gestión de equipos, jugadores y competiciones.</p>
-            <p> - Desarrollo de cálculos automáticos y dinámicos para clasificaciones, estadísticas de jugadores y rankings (máximos goleadores, entre otros).</p>
-            <p> - Aplicación de validaciones tanto en frontend como en backend para garantizar la integridad de los datos.</p>
-            <p> - Actualización dinámica de la información en función de los resultados y datos introducidos.</p>
+            <p data-es="Desarrollo de una aplicación web completa para la gestión de equipos y competiciones deportivas, permitiendo administrar jugadores, partidos y estadísticas, así como visualizar clasificaciones y rankings de rendimiento en tiempo real."
+               data-en="Development of a complete web application for the management of sports teams and competitions, allowing the administration of players, matches and statistics, as well as the visualization of classifications and performance rankings in real time.">
+                Desarrollo de una aplicación web completa para la gestión de equipos y competiciones deportivas, permitiendo administrar jugadores, partidos y estadísticas, así como visualizar clasificaciones y rankings de rendimiento en tiempo real.
+            </p>
+            <p data-es="- Desarrollo del backend con Spring Boot, implementando la lógica de negocio para la gestión de equipos, partidos y cálculo automático de estadísticas."
+               data-en="- Development of the backend with Spring Boot, implementing the business logic for the management of teams, matches and automatic calculation of statistics.">
+                - Desarrollo del backend con Spring Boot, implementando la lógica de negocio para la gestión de equipos, partidos y cálculo automático de estadísticas.
+            </p>
+            <p data-es=" - Implementación de sistema de autenticación y autorización de usuarios mediante Spring Security, incluyendo gestión de roles."
+               data-en="- Implementation of a user authentication and authorization system using Spring Security, including role management.">
+                - Implementación de sistema de autenticación y autorización de usuarios mediante Spring Security, incluyendo gestión de roles.
+            </p>
+            <p data-es=" - Diseño del frontend con HTML, CSS, JavaScript y Thymeleaf, enfocado en una visualización dinámica e intuitiva de los datos."
+               data-en="- Frontend design using HTML, CSS, JavaScript and Thymeleaf, focused on a dynamic and intuitive visualization of the data.">
+                - Diseño del frontend con HTML, CSS, JavaScript y Thymeleaf, enfocado en una visualización dinámica e intuitiva de los datos.
+            </p>
+            <p data-es=" - Integración de base de datos relacional MySQL, modelando entidades y relaciones para la gestión de equipos, jugadores y competiciones."
+               data-en="- Integration of a MySQL relational database, modeling entities and relationships for the management of teams, players, and competitions.">
+                - Integración de base de datos relacional MySQL, modelando entidades y relaciones para la gestión de equipos, jugadores y competiciones.
+            </p>
+            <p data-es=" - Desarrollo de cálculos automáticos y dinámicos para clasificaciones, estadísticas de jugadores y rankings (máximos goleadores, entre otros)."
+               data-en="- Development of automatic and dynamic calculations for classifications, player statistics and rankings (top scorers, among others).">
+                - Desarrollo de cálculos automáticos y dinámicos para clasificaciones, estadísticas de jugadores y rankings (máximos goleadores, entre otros).
+            </p>
+            <p data-es=" - Aplicación de validaciones tanto en frontend como en backend para garantizar la integridad de los datos."
+               data-en="- Implementation of validations in both frontend and backend to ensure data integrity.">
+                - Aplicación de validaciones tanto en frontend como en backend para garantizar la integridad de los datos.
+            </p>
+            <p data-es=" - Actualización dinámica de la información en función de los resultados y datos introducidos."
+               data-en="- Dynamic updating of information based on the results and data entered.">
+                - Actualización dinámica de la información en función de los resultados y datos introducidos.
+            </p>
         </div>
         <div class="project-links">
             <a href="" target="_blank">
@@ -200,7 +336,7 @@
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
                     <path d="M12 .5C5.73.5.75 5.6.75 12c0 5.1 3.29 9.43 7.86 10.96.57.1.78-.25.78-.55v-2.1c-3.2.72-3.88-1.57-3.88-1.57-.52-1.35-1.28-1.71-1.28-1.71-1.05-.73.08-.72.08-.72 1.16.08 1.77 1.22 1.77 1.22 1.04 1.81 2.73 1.29 3.4.99.1-.76.4-1.29.72-1.59-2.55-.29-5.23-1.3-5.23-5.8 0-1.28.46-2.33 1.22-3.15-.12-.3-.53-1.52.12-3.16 0 0 1-.32 3.3 1.2a11.4 11.4 0 0 1 3-.4c1.02 0 2.05.14 3 .4 2.3-1.52 3.3-1.2 3.3-1.2.65 1.64.24 2.86.12 3.16.76.82 1.22 1.87 1.22 3.15 0 4.51-2.69 5.5-5.25 5.79.41.36.77 1.08.77 2.19v3.24c0 .3.21.65.79.54A10.51 10.51 0 0 0 23.25 12C23.25 5.6 18.27.5 12 .5z"/>
                 </svg>
-                Ver código
+                <span data-es="Ver código" data-en="View code">Ver código</span>
             </a>
         </div>
     </div>
@@ -233,27 +369,62 @@
           </span>
         </div>
         <div class="muted">
-            <p>Sistema interno desarrollado durante prácticas para la gestión y visualización del Tech Challenge de la empresa.</p>
-            <p> - Desarrollo con Spring Boot, Thymeleaf, MySQL, HTML, CSS y JavaScript.</p>
-            <p> - Implementación de funcionalidades de administración, gestión de usuarios y visualización de datos.</p>
-            <p> - Integración de control de versiones con Git.</p>
-            <p> - Aplicación orientada a la organización y seguimiento del Tech Challenge interno.</p>
-            <p>Persona Referencia: Jairo.Luzon@hpecds.com</p>
+            <p data-es="Sistema interno desarrollado durante prácticas para la gestión y visualización del Tech Challenge de la empresa."
+               data-en="Internal system developed during internships for the management and visualization of the company's Tech Challenge.">
+                Sistema interno desarrollado durante prácticas para la gestión y visualización del Tech Challenge de la empresa.
+            </p>
+            <p data-es=" - Desarrollo con Spring Boot, Thymeleaf, MySQL, HTML, CSS y JavaScript."
+               data-en="- Development using Spring Boot, Thymeleaf, MySQL, HTML, CSS and JavaScript.">
+                - Desarrollo con Spring Boot, Thymeleaf, MySQL, HTML, CSS y JavaScript.
+            </p>
+            <p data-es=" - Implementación de funcionalidades de administración, gestión de usuarios y visualización de datos."
+               data-en="- Implementation of administration functionalities, user management and data visualization.">
+                - Implementación de funcionalidades de administración, gestión de usuarios y visualización de datos.
+            </p>
+            <p data-es=" - Integración de control de versiones con Git."
+               data-en="- Integration of version control with Git.">
+                - Integración de control de versiones con Git.
+            </p>
+            <p data-es=" - Aplicación orientada a la organización y seguimiento del Tech Challenge interno."
+               data-en="- Application geared towards the organization and monitoring of the internal Tech Challenge.">
+                - Aplicación orientada a la organización y seguimiento del Tech Challenge interno.
+            </p>
+            <p>
+                <span data-es="Persona Referencia:" data-en="Reference Person:">
+                    Persona Referencia:
+                </span>
+                <a class="btn primary" style="background:none" href="mailto:Jairo.Luzon@hpecds.com">
+                    <i data-lucide="mail"></i> Jairo.Luzon@hpecds.com
+                </a>
+            </p>
         </div>
         <div class="project-links">
-            <span class="private">🔒 Proyecto privado (código no público)</span>
+            <span class="private" data-es="🔒 Proyecto privado (código no público)" data-en="🔒 Private project (non-public code)">🔒 Proyecto privado (código no público)</span>
         </div>
     </div>
 </section>
 
 <section id="about">
-    <h2><i data-lucide="user-check"></i> Sobre mí</h2>
+    <h2><i data-lucide="user-check"></i>
+        <span data-es="Sobre mí" data-en="About me">
+            Sobre mí
+        </span>
+    </h2>
 
     <div class="about-wrapper">
         <div class="card about-text">
-            <p>Desarrollador Web con experiencia en Java y Spring Boot, especializado en el desarrollo de aplicaciones completas.</p>
-            <p>He trabajado en proyectos reales y personales implementando lógica de negocio, integración con bases de datos y diseño responsive.</p>
-            <p>Busco mi primera oportunidad laboral donde seguir creciendo como desarrollador y aportar compromiso, aprendizaje continuo y trabajo en equipo.</p>
+            <p data-es="Desarrollador Web con experiencia en Java y Spring Boot, especializado en el desarrollo de aplicaciones completas."
+               data-en="Web Developer with experience in Java and Spring Boot, specializing in the development of complete applications.">
+                Desarrollador Web con experiencia en Java y Spring Boot, especializado en el desarrollo de aplicaciones completas.
+            </p>
+            <p data-es="He trabajado en proyectos reales y personales implementando lógica de negocio, integración con bases de datos y diseño responsive."
+               data-en="I have worked on real and personal projects implementing business logic, database integration, and responsive design.">
+                He trabajado en proyectos reales y personales implementando lógica de negocio, integración con bases de datos y diseño responsive.
+            </p>
+            <p data-es="Busco mi primera oportunidad laboral donde seguir creciendo como desarrollador y aportar compromiso, aprendizaje continuo y trabajo en equipo."
+               data-en="I am looking for my first job opportunity where I can continue to grow as a developer and contribute commitment, continuous learning, and teamwork.">
+                Busco mi primera oportunidad laboral donde seguir creciendo como desarrollador y aportar compromiso, aprendizaje continuo y trabajo en equipo.
+            </p>
         </div>
         <img class="about-img" src="./images/foto.jpeg" alt="foto"/>
     </div>
@@ -268,8 +439,8 @@
     </div>
 
     <div class="footer-right">
-        <a href="#about">Sobre mí</a>
-        <a href="mailto:cvillcarr@gmail.com">Contacto</a>
+        <a href="#about" data-es="Sobre mí" data-en="About me">Sobre mí</a>
+        <a href="mailto:cvillcarr@gmail.com" data-es="Contacto" data-en="Contact">Contacto</a>
     </div>
 </footer>
 
